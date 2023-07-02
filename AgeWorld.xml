@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+ï»¿<?xml version="1.0" ?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
         <info name="AgeWorld" version="1.1"/>
@@ -1030,7 +1030,7 @@
             <repairRules name="repairMissile-Shield"/>
             <repairRules name="repairEnergy-Shield"/>
         </repairFrontier>
-
+       
         <productionFrontier name="production_Brittonic_Combat">
             <frontierRules name="buyCaveman"/>
             <frontierRules name="buyCamp"/>
@@ -2719,11 +2719,11 @@
                 <step name="endRoundStep" delegate="endRound"/>
             </sequence>
         <offset round="0"/>
-    </gamePlay>
-        </production>
+    
+        
         <attatchmentList>               
                     
-                    </attatchment>
+                    <attatchment>
                     <attatchment name="territoryAttatchment" attatchTo="Sudan" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
                         <option name="production" value="2"/>
                    </attatchment>
@@ -3159,7 +3159,7 @@
                     <attatchment name="territoryAttatchment" attatchTo="Greenland" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
                         <option name="production" value="2"/>
                    </attatchment>
-        </attatchmentList>
+        
         <initialize>
                 <ownerInitialize>
                         <territoryOwner territory="North China" owner="Hattic"/>
@@ -3180,7 +3180,7 @@
 
                         <unitPlacement unitType="Caveman" territory="Mexico" quantity="10" owner="Baktic"/>
                             
-                        <unitPlacement unitType="Caveman" territory="Germany etc" quantity="10" owner=”Germanic ect”/>    
+                        <unitPlacement unitType="Caveman" territory="Germany etc" quantity="10" owner="Germanic ect"/>    
                         
                         <unitPlacement unitType="Caveman" territory="North China" quantity="10" owner="Hattic"/>  
                         
@@ -3202,7 +3202,7 @@
                         <unitPlacement unitType="Caveman" territory="Argentina" quantity="2"/>    
                         <unitPlacement unitType="Caveman" territory="Uruguay" quantity="1"/>   
                        <unitPlacement unitType="Cavemen" territory="South Africa etc" quantity="2"/>   
-                        <unitPlacement unitType="Saber-Tooth" territory="Zimbabwe" quantity=”2"/> 
+                        <unitPlacement unitType="Saber-Tooth" territory="Zimbabwe" quantity="2"/> 
                         <unitPlacement unitType="Saber-Tooth" territory="Kenya etc" quantity="2"/>    
                         <unitPlacement unitType="Caveman" territory="Ivory Coast etc" quantity="2"/>   
                         <unitPlacement unitType="Caveman" territory="Saudi Arabia etc" quantity="1"/> 
@@ -19476,13 +19476,10 @@
 <br><center><img src="TripleALogoNew.png"/></center>
 <br>
 ]]>
-            </value>
-        </property>
-    </propertyList>
+</value>
 
 </property>
-                <property name="mapName" value="AgeWorld" editable="false"/>
-                
-                </property>
-        </propertyList>
-</game>
+</propertyList>
+  
+  
+  </game>
