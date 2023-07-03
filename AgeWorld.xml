@@ -990,7 +990,7 @@
         <offset round="0"/>
     </gamePlay>
         <production>
-                <!-- Repair rules -->
+                
 
         <repairRule name="repairFort">
             <cost resource="PUs" quantity="10" />
@@ -2593,135 +2593,7 @@
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
             </attachment>
-            </attachmentList>
-                <delegate name="initDelegate" javaClass="games.strategy.triplea.delegate.InitializationDelegate" display="Initializing Delegates"/>
-        <delegate name="bid" javaClass="games.strategy.triplea.delegate.BidPurchaseDelegate" display="Bid Purchase"/>
-        <delegate name="placeBid" javaClass="games.strategy.triplea.delegate.BidPlaceDelegate" display="Bid Placement"/>
-        <delegate name="userActions" javaClass="games.strategy.triplea.delegate.UserActionDelegate" display="User Actions"/>
-        <delegate name="tech" javaClass="games.strategy.triplea.delegate.TechnologyDelegate" display="Research Technology"/>
-        <delegate name="tech_activation" javaClass="games.strategy.triplea.delegate.TechActivationDelegate" display="Technical advancements"/>
-        <delegate name="move" javaClass="games.strategy.triplea.delegate.MoveDelegate" display="Combat Move"/>
-        <delegate name="battle" javaClass="games.strategy.triplea.delegate.BattleDelegate" display="Combat"/>
-        <delegate name="purchase" javaClass="games.strategy.triplea.delegate.PurchaseDelegate" display="Purchase Units"/>
-        <delegate name="placeNoAirCheck" javaClass="games.strategy.triplea.delegate.NoAirCheckPlaceDelegate" display="Place Units"/>
-        <delegate name="place" javaClass="games.strategy.triplea.delegate.PlaceDelegate" display="Place Units"/>
-        <delegate name="politics" javaClass="games.strategy.triplea.delegate.PoliticsDelegate" display="Politics"/>
-        <delegate name="endTurn" javaClass="games.strategy.triplea.delegate.EndTurnDelegate" display="Turn Complete"/>
-        <delegate name="endRound" javaClass="games.strategy.triplea.delegate.EndRoundDelegate" display="Round Complete"/>
-
-            <sequence>
-		<step name="gameInitDelegate" delegate="initDelegate" maxRunCount="1"/>
-		<step name="BarbariansStart" delegate="userActions" player="Barbarians" maxRunCount="1"/>
-                <step name="NatureStart" delegate="userActions" player="Nature" maxRunCount="1"/>
-                <step name="DiseasesStart" delegate="userActions" player="Diseases" maxRunCount="1"/>
-                <step name="AIStart" delegate="userActions" player="AI" maxRunCount="1"/>
-                <step name="PostColdWarRadiationBattle" delegate="battle" player="AI" display="Ongoing Battle"/>
-
-                <step name="BrittonicCombatMove" delegate="move" player="Brittonic" display="Combat Move"/>
-                <step name="BrittonicBattle" delegate="battle" player="Brittonic" display="Combat"/>
-                <step name="BrittonicNonCombatMove" delegate="move" player="Brittonic" display="Non Combat Move"/>
-                <step name="BrittonicPurchase" delegate="purchase" player="Brittonic" display="Purchase Units"/>
-                <step name="BrittonicPlace" delegate="place" player="Brittonic" display="Place Units"/>
-                <step name="BrittonicEndTurn" delegate="endTurn" player="Brittonic" display="Turn Complete"/>
-
-                <step name="BrittonicRadiationBattle" delegate="battle" player="AI" display="Ongoing Battle"/>
-
-                <step name="BalticCombatMove" delegate="move" player="Baltic" display="Combat Move"/>
-                <step name="BalticBattle" delegate="battle" player="Baltic" display="Combat"/>
-                <step name="BalticNonCombatMove" delegate="move" player="Baltic" display="Non Combat Move"/>
-                <step name="BalticPurchase" delegate="purchase" player="Baltic" display="Purchase Units"/>
-                <step name="BalticPlace" delegate="place" player="Baltic" display="Place Units"/>
-                <step name="BalticEndTurn" delegate="endTurn" player="Baltic" display="Turn Complete"/>
-
-                <step name="BalticRadiationBattle" delegate="battle" player="AI" display="Ongoing Battle"/>
-
-                <step name="GermanicCombatMove" delegate="move" player="Germanic" display="Combat Move"/>
-                <step name="GermanicBattle" delegate="battle" player="Germanic" display="Combat"/>
-                <step name="GermanicNonCombatMove" delegate="move" player="Germanic" display="Non Combat Move"/>
-                <step name="GermanicPurchase" delegate="purchase" player="Germanic" display="Purchase Units"/>
-                <step name="GermanicPlace" delegate="place" player="Germanic" display="Place Units"/>
-                <step name="GermanicEndTurn" delegate="endTurn" player="Germanic" display="Turn Complete"/>
-
-                <step name="GermanicRadiationBattle" delegate="battle" player="AI" display="Ongoing Battle"/>
-
-                <step name="SlavicCombatMove" delegate="move" player="Slavic" display="Combat Move"/>
-                <step name="SlavicBattle" delegate="battle" player="Slavic" display="Combat"/>
-                <step name="SlavicNonCombatMove" delegate="move" player="Slavic" display="Non Combat Move"/>
-                <step name="SlavicPurchase" delegate="purchase" player="Slavic" display="Purchase Units"/>
-                <step name="SlavicPlace" delegate="place" player="Slavic" display="Place Units"/>
-                <step name="SlavicEndTurn" delegate="endTurn" player="Slavic" display="Turn Complete"/>
-
-                <step name="SlavicRadiationBattle" delegate="battle" player="AI" display="Ongoing Battle"/>
-
-                <step name="CelticCombatMove" delegate="move" player="Celtic" display="Combat Move"/>
-                <step name="CelticBattle" delegate="battle" player="Celtic" display="Combat"/>
-                <step name="CelticNonCombatMove" delegate="move" player="Celtic" display="Non Combat Move"/>
-                <step name="CelticPurchase" delegate="purchase" player="Celtic" display="Purchase Units"/>
-                <step name="CelticPlace" delegate="place" player="Celtic" display="Place Units"/>
-                <step name="CelticEndTurn" delegate="endTurn" player="Celtic" display="Turn Complete"/>
-
-                <step name="CelticRadiationBattle" delegate="battle" player="AI" display="Ongoing Battle"/>
-
-                <step name="HellenicCombatMove" delegate="move" player="Hellenic" display="Combat Move"/>
-                <step name="HellenicBattle" delegate="battle" player="Hellenic" display="Combat"/>
-                <step name="HellenicNonCombatMove" delegate="move" player="Hellenic" display="Non Combat Move"/>
-                <step name="HellenicPurchase" delegate="purchase" player="Hellenic" display="Purchase Units"/>
-                <step name="HellenicPlace" delegate="place" player="Hellenic" display="Place Units"/>
-                <step name="HellenicEndTurn" delegate="endTurn" player="Hellenic" display="Turn Complete"/>
-
-                <step name="HellenicRadiationBattle" delegate="battle" player="AI" display="Ongoing Battle"/>
-
-                <step name="RomanicCombatMove" delegate="move" player="Romanic" display="Combat Move"/>
-                <step name="RomanicBattle" delegate="battle" player="Romanic" display="Combat"/>
-                <step name="RomanicNonCombatMove" delegate="move" player="Romanic" display="Non Combat Move"/>
-                <step name="RomanicPurchase" delegate="purchase" player="Romanic" display="Purchase Units"/>
-                <step name="RomanicPlace" delegate="place" player="Romanic" display="Place Units"/>
-                <step name="RomanicEndTurn" delegate="endTurn" player="Romanic" display="Turn Complete"/>
-
-                <step name="RomanicRadiationBattle" delegate="battle" player="AI" display="Ongoing Battle"/>
-
-                <step name="HatticCombatMove" delegate="move" player="Hattic" display="Combat Move"/>
-                <step name="HatticBattle" delegate="battle" player="Hattic" display="Combat"/>
-                <step name="HatticNonCombatMove" delegate="move" player="Hattic" display="Non Combat Move"/>
-                <step name="HatticPurchase" delegate="purchase" player="Hattic" display="Purchase Units"/>
-                <step name="HatticPlace" delegate="place" player="Hattic" display="Place Units"/>
-                <step name="HatticEndTurn" delegate="endTurn" player="Hattic" display="Turn Complete"/>
-
-                <step name="HatticRadiationBattle" delegate="battle" player="AI" display="Ongoing Battle"/>
-
-                <step name="BarbariansCombatMove" delegate="move" player="Barbarians" display="Combat Move" maxRunCount="55"/>
-                <step name="BarbariansBattle" delegate="battle" player="Barbarians" display="Combat" maxRunCount="55"/>
-                <step name="BarbariansNonCombatMove" delegate="move" player="Barbarians" display="Non Combat Move" maxRunCount="55"/>
-                <step name="BarbariansPurchase" delegate="purchase" player="Barbarians" display="Purchase Units" maxRunCount="55"/>
-                <step name="BarbariansPlace" delegate="place" player="Barbarians" display="Place Units" maxRunCount="55"/>
-                <step name="BarbariansEndTurn" delegate="endTurn" player="Barbarians" display="Turn Complete" maxRunCount="55"/>
-
-                <step name="BarbariansRadiationBattle" delegate="battle" player="AI" display="Ongoing Battle"/>
-
-                <step name="NatureCombatMove" delegate="move" player="Nature" display="Combat Move" maxRunCount="10"/>
-                <step name="NatureBattle" delegate="battle" player="Nature" display="Combat" maxRunCount="10"/>
-                <step name="NatureNonCombatMove" delegate="move" player="Nature" display="Non Combat Move" maxRunCount="10"/>
-                <step name="NaturePurchase" delegate="purchase" player="Nature" display="Purchase Units" maxRunCount="10"/>
-                <step name="NaturePlace" delegate="place" player="Nature" display="Place Units" maxRunCount="10"/>
-                <step name="NatureEndTurn" delegate="endTurn" player="Nature" display="Turn Complete" maxRunCount="10"/>
-
-                <step name="NatureRadiationBattle" delegate="battle" player="AI" display="Ongoing Battle"/>
-
-                <step name="DiseasesCombatMove" delegate="move" player="Diseases" display="Combat Move" maxRunCount="35"/>
-                <step name="DiseasesBattle" delegate="battle" player="Diseases" display="Combat" maxRunCount="35"/>
-                <step name="DiseasesNonCombatMove" delegate="move" player="Diseases" display="Non Combat Move" maxRunCount="35"/>
-                <step name="DiseasesPurchase" delegate="purchase" player="Diseases" display="Purchase Units" maxRunCount="35"/>
-                <step name="DiseasesPlace" delegate="place" player="Diseases" display="Place Units" maxRunCount="35"/>
-                <step name="DiseasesEndTurn" delegate="endTurn" player="Diseases" display="Turn Complete" maxRunCount="35"/>
-
-                <step name="DiseasesRadiationBattle" delegate="battle" player="AI" display="Ongoing Battle"/>
-
-                <step name="endRoundStep" delegate="endRound"/>
-            </sequence>
-        <offset round="0"/>
-    
-        
-        <attatchmentList>               
+                           
                     
                     <attatchment>
                     <attatchment name="territoryAttatchment" attatchTo="Sudan" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
@@ -3159,67 +3031,7 @@
                     <attatchment name="territoryAttatchment" attatchTo="Greenland" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
                         <option name="production" value="2"/>
                    </attatchment>
-        
-        <initialize>
-                <ownerInitialize>
-                        <territoryOwner territory="North China" owner="Hattic"/>
-                        <territoryOwner territory="West India" owner="Brittonic"/>
-                        <territoryOwner territory="Mexico" owner="Baltic"/>
-                        <territoryOwner territory="Germany etc" owner="Germanic"/>
-                        <territoryOwner territory="Congo" owner="Hellenic"/>
-                        <territoryOwner territory="Iraq" owner="Romanic"/>
-                        <territoryOwner territory="Central Russia" owner="Slavic"/>
-                        <territoryOwner territory="Chile" owner="Celtic"/>
-    
-                </ownerInitialize>
-                <unitInitialize>
-
-                        <unitPlacement unitType="Caveman" territory="West India" quantity="10" owner="Britton"/>
-                        
-                        <unitPlacement unitType="Caveman" territory="Iraq" quantity="10" owner="Romanic"/>
-
-                        <unitPlacement unitType="Caveman" territory="Mexico" quantity="10" owner="Baktic"/>
-                            
-                        <unitPlacement unitType="Caveman" territory="Germany etc" quantity="10" owner="Germanic ect"/>    
-                        
-                        <unitPlacement unitType="Caveman" territory="North China" quantity="10" owner="Hattic"/>  
-                        
-                        <unitPlacement unitType="Caveman" territory="Congo" quantity="10" owner="Hellenic"/>
-
-                        <unitPlacement unitType="Caveman" territory="Central Russia" quantity="10" owner="Slavic"/>
-
-                        <unitPlacement unitType="Caveman" territory="Chile" quantity="10" owner="Celtic"/>
-
-                        <unitPlacement unitType="Saber-Tooth" territory="Alaska" quantity="1"/>    
-                        <unitPlacement unitType="Caveman" territory="Yukon" quantity="1"/>        
-                        <unitPlacement unitType="Cave-Bear" territory="Quebec" quantity="1"/>    
-                        <unitPlacement unitType="Caveman" territory="South United States" quantity="1"/>   
-                        <unitPlacement unitType="Wild-Mammoth" territory="Midwest United States" quantity="1"/>
-                        <unitPlacement unitType="Saber-Tooth" territory="Nicaragua" quantity="1"/>    
-                        <unitPlacement unitType="Saber-Tooth" territory="Venezuela" quantity="1"/>  
-                        <unitPlacement unitType="Caveman" territory="Ecuador" quantity="1"/>    
-                        <unitPlacement unitType="Saber-Tooth" territory="Amazon Basin" quantity="2"/>    
-                        <unitPlacement unitType="Caveman" territory="Argentina" quantity="2"/>    
-                        <unitPlacement unitType="Caveman" territory="Uruguay" quantity="1"/>   
-                       <unitPlacement unitType="Cavemen" territory="South Africa etc" quantity="2"/>   
-                        <unitPlacement unitType="Saber-Tooth" territory="Zimbabwe" quantity="2"/> 
-                        <unitPlacement unitType="Saber-Tooth" territory="Kenya etc" quantity="2"/>    
-                        <unitPlacement unitType="Caveman" territory="Ivory Coast etc" quantity="2"/>   
-                        <unitPlacement unitType="Caveman" territory="Saudi Arabia etc" quantity="1"/> 
-                        <unitPlacement unitType="Caveman" territory="South India" quantity="2"/>    
-                        <unitPlacement unitType="Cave-Bear" territory="Tibet" quantity="2"/>
-                       <unitPlacement unitType="Saber-Tooth" territory="Vietnam etc" quantity="1"/>    
-                       <unitPlacement unitType="Caveman" territory="Mongolia" quantity="1"/> 
-                       <unitPlacement unitType="Caveman" territory="Japan" quantity="1"/>    
-                       <unitPlacement unitType="Cave-Bear" territory="Kamchatka" quantity="2"/>    
-                       <unitPlacement unitType="Wild-Mammoth" territory="Southwest Siberia" quantity="1"/>    
-                        <unitPlacement unitType="Caveman" territory="Ukraine etc" quantity="1"/>    
-                        <unitPlacement unitType="Caveman" territory="Norway etc" quantity="2"/>    
-                        <unitPlacement unitType="Caveman" territory="United Kingdom" quantity="2"/>    
-                        <unitPlacement unitType="Caveman" territory="Western Australia" quantity="1"/> 
-                        <unitPlacement unitType="Cave-Bear" territory="Latvia" quantity="1"/>   
-                            
-                 <!-- Start factories, shield and artillery support attachments -->
+   <!-- Start factories, shield and artillery support attachments -->
         <attachment name="supportAttachmentCamp" attachTo="Camp" javaClass="games.strategy.triplea.attachments.UnitSupportAttachment" type="unitType">
             <option name="unitType" value="Anti-Air:Observation-Balloon:Barrage-Balloon:Caveman:Axeman:Spearman:Swordsman:Halberdman:Musketman:Rifleman:Infantry:Shock-Trooper:Chariot:Horseman:Knight:Carabinier:Truck:Attack-Helicopter:War-Robot:Slinger:Bowman:Crossbowman:Mortar:Rocket-Launcher:Catapult:Ballista:Trebuchet:Cannon:Tank:Battle-Tank:Battle-Mech:Warplane:Fighter:Bomber:Air-Transport:Jet-Fighter:Stealth-Bomber:Attack-Drone"/>
             <option name="faction" value="allied"/>
@@ -18991,35 +18803,73 @@
             <option name="removeUnits" value="all:Rocket" count="9999"/>
         </attachment>
 <!-- End No move during the Cold War. Mortar-Bombardment and Rockets seem to give players the unwanted Combat Move -->
-               <initialize>
-        <ownerInitialize>
-            <territoryOwner territory="Aeduia" owner="Nature"/>
-            <territoryOwner territory="Akkad" owner="Nature"/>
-            <territoryOwner territory="Alemannia" owner="Barbarians"/>
-            <territoryOwner territory="Anglia" owner="Barbarians"/>
-            <territoryOwner territory="Aorsi" owner="Barbarians"/>
-            <territoryOwner territory="Aquitania" owner="Barbarians"/>
-            <territoryOwner territory="Aram" owner="Nature"/>
-            <territoryOwner territory="Ardhan" owner="Nature"/>
-            <territoryOwner territory="Aremorica" owner="Nature"/>
-            <territoryOwner territory="Armenia" owner="Barbarians"/>
-            <territoryOwner territory="Arothi" owner="Barbarians"/>
-            <territoryOwner territory="Arvernia" owner="Nature"/>
-            <territoryOwner territory="Assur" owner="Nature"/>
-            <territoryOwner territory="Aukstaitia" owner="Barbarians"/>
-            <territoryOwner territory="Baku" owner="Nature"/>
-            <territoryOwner territory="Balticum" owner="Baltic"/>
+
+        </attachmentList>
+        <initialize>
+                <ownerInitialize>
+                        <territoryOwner territory="North China" owner="Hattic"/>
+                        <territoryOwner territory="West India" owner="Brittonic"/>
+                        <territoryOwner territory="Mexico" owner="Baltic"/>
+                        <territoryOwner territory="Germany etc" owner="Germanic"/>
+                        <territoryOwner territory="Congo" owner="Hellenic"/>
+                        <territoryOwner territory="Iraq" owner="Romanic"/>
+                        <territoryOwner territory="Central Russia" owner="Slavic"/>
+                        <territoryOwner territory="Chile" owner="Celtic"/>
+                        
+    
+                </ownerInitialize>
+                <unitInitialize>
+
+                        <unitPlacement unitType="Caveman" territory="West India" quantity="10" owner="Britton"/>
+                        
+                        <unitPlacement unitType="Caveman" territory="Iraq" quantity="10" owner="Romanic"/>
+
+                        <unitPlacement unitType="Caveman" territory="Mexico" quantity="10" owner="Baktic"/>
+                            
+                        <unitPlacement unitType="Caveman" territory="Germany etc" quantity="10" owner="Germanic ect"/>    
+                        
+                        <unitPlacement unitType="Caveman" territory="North China" quantity="10" owner="Hattic"/>  
+                        
+                        <unitPlacement unitType="Caveman" territory="Congo" quantity="10" owner="Hellenic"/>
+
+                        <unitPlacement unitType="Caveman" territory="Central Russia" quantity="10" owner="Slavic"/>
+
+                        <unitPlacement unitType="Caveman" territory="Chile" quantity="10" owner="Celtic"/>
+
+                        <unitPlacement unitType="Saber-Tooth" territory="Alaska" quantity="1"/>    
+                        <unitPlacement unitType="Caveman" territory="Yukon" quantity="1"/>        
+                        <unitPlacement unitType="Cave-Bear" territory="Quebec" quantity="1"/>    
+                        <unitPlacement unitType="Caveman" territory="South United States" quantity="1"/>   
+                        <unitPlacement unitType="Wild-Mammoth" territory="Midwest United States" quantity="1"/>
+                        <unitPlacement unitType="Saber-Tooth" territory="Nicaragua" quantity="1"/>    
+                        <unitPlacement unitType="Saber-Tooth" territory="Venezuela" quantity="1"/>  
+                        <unitPlacement unitType="Caveman" territory="Ecuador" quantity="1"/>    
+                        <unitPlacement unitType="Saber-Tooth" territory="Amazon Basin" quantity="2"/>    
+                        <unitPlacement unitType="Caveman" territory="Argentina" quantity="2"/>    
+                        <unitPlacement unitType="Caveman" territory="Uruguay" quantity="1"/>   
+                       <unitPlacement unitType="Cavemen" territory="South Africa etc" quantity="2"/>   
+                        <unitPlacement unitType="Saber-Tooth" territory="Zimbabwe" quantity="2"/> 
+                        <unitPlacement unitType="Saber-Tooth" territory="Kenya etc" quantity="2"/>    
+                        <unitPlacement unitType="Caveman" territory="Ivory Coast etc" quantity="2"/>   
+                        <unitPlacement unitType="Caveman" territory="Saudi Arabia etc" quantity="1"/> 
+                        <unitPlacement unitType="Caveman" territory="South India" quantity="2"/>    
+                        <unitPlacement unitType="Cave-Bear" territory="Tibet" quantity="2"/>
+                       <unitPlacement unitType="Saber-Tooth" territory="Vietnam etc" quantity="1"/>    
+                       <unitPlacement unitType="Caveman" territory="Mongolia" quantity="1"/> 
+                       <unitPlacement unitType="Caveman" territory="Japan" quantity="1"/>    
+                       <unitPlacement unitType="Cave-Bear" territory="Kamchatka" quantity="2"/>    
+                       <unitPlacement unitType="Wild-Mammoth" territory="Southwest Siberia" quantity="1"/>    
+                        <unitPlacement unitType="Caveman" territory="Ukraine etc" quantity="1"/>    
+                        <unitPlacement unitType="Caveman" territory="Norway etc" quantity="2"/>    
+                        <unitPlacement unitType="Caveman" territory="United Kingdom" quantity="2"/>    
+                        <unitPlacement unitType="Caveman" territory="Western Australia" quantity="1"/> 
+                        <unitPlacement unitType="Cave-Bear" territory="Latvia" quantity="1"/>   
+                            
+                
+               
             
-</ownerInitialize>
-        <unitInitialize>
-            <unitPlacement unitType="Caveman" territory="Aquitania" quantity="1" owner="Barbarians"/>
-            <unitPlacement unitType="Caves" territory="Ardhan" quantity="1" owner="Nature"/>
-            <unitPlacement unitType="Cave-Bear" territory="Ardhan" quantity="1" owner="Nature"/>
-            <unitPlacement unitType="Caveman" territory="Aukstaitia" quantity="1" owner="Barbarians"/>
-            <unitPlacement unitType="Wild-Mammoth" territory="Baku" quantity="1" owner="Nature"/>
-            <unitPlacement unitType="Caveman" territory="Balticum" quantity="10" owner="Baltic"/>
-            <unitPlacement unitType="Camp" territory="Balticum" quantity="1" owner="Baltic"/>
-  </unitInitialize>
+
+        
 
         <resourceInitialize>
             <resourceGiven player="Brittonic" resource="PUs" quantity="10"/>
@@ -19313,7 +19163,7 @@
             <boolean/>
         </property>
 
-        <property name="mapName" value="age_of_tribes" editable="false">
+        <property name="mapName" value="AgeWorld" editable="false">
             <string/>
         </property>
 
@@ -19478,7 +19328,6 @@
 ]]>
 </value>
 
-</property>
 </propertyList>
   
   
