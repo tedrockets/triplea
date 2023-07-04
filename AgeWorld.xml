@@ -851,7 +851,8 @@
 	<unit name="Radiation-Zone"/>
 	<unit name="Develop-Missile-Silo"/>
 	<unit name="Missile-Silo"/>
-	<unit name="Ballistic-Missile"/>    
+	<unit name="Ballistic-Missile"/> 
+	<unit name="Develop-Caveman"/>
         </unitList>
 
 <relationshipTypes>
@@ -990,6 +991,497 @@
         <offset round="0"/>
     </gamePlay>
         <production>
+        <productionRule name="buyPlague">
+            <cost resource="PUs" quantity="1"/>
+            <result resourceOrUnit="Plague" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyBlack-Death">
+            <cost resource="PUs" quantity="100"/>
+            <result resourceOrUnit="Black-Death" quantity="1"/>
+        </productionRule>
+
+        <productionRule name="buySaber-Tooth">
+            <cost resource="PUs" quantity="47"/>
+            <result resourceOrUnit="Saber-Tooth" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyCave-Bear">
+            <cost resource="PUs" quantity="49"/>
+            <result resourceOrUnit="Cave-Bear" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyWild-Mammoth">
+            <cost resource="PUs" quantity="18"/>
+            <result resourceOrUnit="Wild-Mammoth" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyCaves">
+            <cost resource="PUs" quantity="1"/>
+            <result resourceOrUnit="Caves" quantity="1"/>
+        </productionRule>
+
+        <productionRule name="buyDevelop-Boat">
+            <cost resource="Tech" quantity="1"/>
+            <result resourceOrUnit="Develop-Boat" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyBoat">
+            <cost resource="PUs" quantity="24"/>
+            <result resourceOrUnit="Boat" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Galley">
+            <cost resource="Tech" quantity="18"/>
+            <result resourceOrUnit="Develop-Galley" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyGalley">
+            <cost resource="PUs" quantity="25"/>
+            <result resourceOrUnit="Galley" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Sail-Ship">
+            <cost resource="Tech" quantity="47"/>
+            <result resourceOrUnit="Develop-Sail-Ship" quantity="1"/>
+        </productionRule>
+        <productionRule name="buySail-Ship">
+            <cost resource="PUs" quantity="26"/>
+            <result resourceOrUnit="Sail-Ship" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Ironclad">
+            <cost resource="Tech" quantity="180"/>
+            <result resourceOrUnit="Develop-Ironclad" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyIronclad">
+            <cost resource="PUs" quantity="27"/>
+            <result resourceOrUnit="Ironclad" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Warship">
+            <cost resource="Tech" quantity="220"/>
+            <result resourceOrUnit="Develop-Warship" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyWarship">
+            <cost resource="PUs" quantity="28"/>
+            <result resourceOrUnit="Warship" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Submarine">
+            <cost resource="Tech" quantity="250"/>
+            <result resourceOrUnit="Develop-Submarine" quantity="1"/>
+        </productionRule>
+        <productionRule name="buySubmarine">
+            <cost resource="PUs" quantity="29"/>
+            <result resourceOrUnit="Submarine" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Fleet-Carrier">
+            <cost resource="Tech" quantity="310"/>
+            <result resourceOrUnit="Develop-Fleet-Carrier" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyFleet-Carrier">
+            <cost resource="PUs" quantity="30"/>
+            <result resourceOrUnit="Fleet-Carrier" quantity="1"/>
+        </productionRule>
+
+        <productionRule name="buyCaveman">
+            <cost resource="PUs" quantity="15"/>
+            <result resourceOrUnit="Caveman" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyMammoth">
+            <cost resource="PUs" quantity="17"/>
+            <result resourceOrUnit="Mammoth" quantity="1"/>
+        </productionRule>
+
+        <productionRule name="buyDevelop-Axeman">
+            <cost resource="Tech" quantity="3"/>
+            <result resourceOrUnit="Develop-Axeman" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyAxeman">
+            <cost resource="PUs" quantity="15"/>
+            <result resourceOrUnit="Axeman" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Spearman">
+            <cost resource="Tech" quantity="9"/>
+            <result resourceOrUnit="Develop-Spearman" quantity="1"/>
+        </productionRule>
+        <productionRule name="buySpearman">
+            <cost resource="PUs" quantity="16"/>
+            <result resourceOrUnit="Spearman" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Swordsman">
+            <cost resource="Tech" quantity="16"/>
+            <result resourceOrUnit="Develop-Swordsman" quantity="1"/>
+        </productionRule>
+        <productionRule name="buySwordsman">
+            <cost resource="PUs" quantity="17"/>
+            <result resourceOrUnit="Swordsman" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Halberdman">
+            <cost resource="Tech" quantity="26"/>
+            <result resourceOrUnit="Develop-Halberdman" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyHalberdman">
+            <cost resource="PUs" quantity="18"/>
+            <result resourceOrUnit="Halberdman" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Musketman">
+            <cost resource="Tech" quantity="53"/>
+            <result resourceOrUnit="Develop-Musketman" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyMusketman">
+            <cost resource="PUs" quantity="19"/>
+            <result resourceOrUnit="Musketman" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Rifleman">
+            <cost resource="Tech" quantity="60"/>
+            <result resourceOrUnit="Develop-Rifleman" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyRifleman">
+            <cost resource="PUs" quantity="20"/>
+            <result resourceOrUnit="Rifleman" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Infantry">
+            <cost resource="Tech" quantity="200"/>
+            <result resourceOrUnit="Develop-Infantry" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyInfantry">
+            <cost resource="PUs" quantity="21"/>
+            <result resourceOrUnit="Infantry" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Shock-Trooper">
+            <cost resource="Tech" quantity="500"/>
+            <result resourceOrUnit="Develop-Shock-Trooper" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyShock-Trooper">
+            <cost resource="PUs" quantity="22"/>
+            <result resourceOrUnit="Shock-Trooper" quantity="1"/>
+        </productionRule>
+
+        <productionRule name="buyDevelop-Chariot">
+            <cost resource="Tech" quantity="11"/>
+            <result resourceOrUnit="Develop-Chariot" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyChariot">
+            <cost resource="PUs" quantity="17"/>
+            <result resourceOrUnit="Chariot" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Horseman">
+            <cost resource="Tech" quantity="17"/>
+            <result resourceOrUnit="Develop-Horseman" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyHorseman">
+            <cost resource="PUs" quantity="18"/>
+            <result resourceOrUnit="Horseman" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Knight">
+            <cost resource="Tech" quantity="28"/>
+            <result resourceOrUnit="Develop-Knight" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyKnight">
+            <cost resource="PUs" quantity="19"/>
+            <result resourceOrUnit="Knight" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Carabinier">
+            <cost resource="Tech" quantity="65"/>
+            <result resourceOrUnit="Develop-Carabinier" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyCarabinier">
+            <cost resource="PUs" quantity="20"/>
+            <result resourceOrUnit="Carabinier" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Truck">
+            <cost resource="Tech" quantity="230"/>
+            <result resourceOrUnit="Develop-Truck" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyTruck">
+            <cost resource="PUs" quantity="20"/>
+            <result resourceOrUnit="Truck" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Attack-Helicopter">
+            <cost resource="Tech" quantity="420"/>
+            <result resourceOrUnit="Develop-Attack-Helicopter" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyAttack-Helicopter">
+            <cost resource="PUs" quantity="25"/>
+            <result resourceOrUnit="Attack-Helicopter" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-War-Robot">
+            <cost resource="Tech" quantity="550"/>
+            <result resourceOrUnit="Develop-War-Robot" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyWar-Robot">
+            <cost resource="PUs" quantity="18"/>
+            <result resourceOrUnit="War-Robot" quantity="1"/>
+        </productionRule>
+
+        <productionRule name="buyDevelop-Catapult">
+            <cost resource="Tech" quantity="13"/>
+            <result resourceOrUnit="Develop-Catapult" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyCatapult">
+            <cost resource="PUs" quantity="17"/>
+            <result resourceOrUnit="Catapult" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Ballista">
+            <cost resource="Tech" quantity="19"/>
+            <result resourceOrUnit="Develop-Ballista" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyBallista">
+            <cost resource="PUs" quantity="18"/>
+            <result resourceOrUnit="Ballista" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Trebuchet">
+            <cost resource="Tech" quantity="34"/>
+            <result resourceOrUnit="Develop-Trebuchet" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyTrebuchet">
+            <cost resource="PUs" quantity="19"/>
+            <result resourceOrUnit="Trebuchet" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Cannon">
+            <cost resource="Tech" quantity="42"/>
+            <result resourceOrUnit="Develop-Cannon" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyCannon">
+            <cost resource="PUs" quantity="21"/>
+            <result resourceOrUnit="Cannon" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Tank">
+            <cost resource="Tech" quantity="260"/>
+            <result resourceOrUnit="Develop-Tank" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyTank">
+            <cost resource="PUs" quantity="23"/>
+            <result resourceOrUnit="Tank" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Battle-Tank">
+            <cost resource="Tech" quantity="360"/>
+            <result resourceOrUnit="Develop-Battle-Tank" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyBattle-Tank">
+            <cost resource="PUs" quantity="24"/>
+            <result resourceOrUnit="Battle-Tank" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Battle-Mech">
+            <cost resource="Tech" quantity="600"/>
+            <result resourceOrUnit="Develop-Battle-Mech" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyBattle-Mech">
+            <cost resource="PUs" quantity="25"/>
+            <result resourceOrUnit="Battle-Mech" quantity="1"/>
+        </productionRule>
+
+        <productionRule name="buyDevelop-Slinger">
+            <cost resource="Tech" quantity="7"/>
+            <result resourceOrUnit="Develop-Slinger" quantity="1"/>
+        </productionRule>
+        <productionRule name="buySlinger">
+            <cost resource="PUs" quantity="15"/>
+            <result resourceOrUnit="Slinger" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Bowman">
+            <cost resource="Tech" quantity="15"/>
+            <result resourceOrUnit="Develop-Bowman" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyBowman">
+            <cost resource="PUs" quantity="16"/>
+            <result resourceOrUnit="Bowman" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Crossbowman">
+            <cost resource="Tech" quantity="29"/>
+            <result resourceOrUnit="Develop-Crossbowman" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyCrossbowman">
+            <cost resource="PUs" quantity="17"/>
+            <result resourceOrUnit="Crossbowman" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Mortar">
+            <cost resource="Tech" quantity="45"/>
+            <result resourceOrUnit="Develop-Mortar" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyMortar">
+            <cost resource="PUs" quantity="20"/>
+            <result resourceOrUnit="Mortar" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyMortar-Bombardment">
+            <cost resource="PUs" quantity="1"/>
+            <result resourceOrUnit="Mortar-Bombardment" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Barrage-Balloon">
+            <cost resource="Tech" quantity="240"/>
+            <result resourceOrUnit="Develop-Barrage-Balloon" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyBarrage-Balloon">
+            <cost resource="PUs" quantity="14"/>
+            <result resourceOrUnit="Barrage-Balloon" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Anti-Air">
+            <cost resource="Tech" quantity="310"/>
+            <result resourceOrUnit="Develop-Anti-Air" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyAnti-Air">
+            <cost resource="PUs" quantity="15"/>
+            <result resourceOrUnit="Anti-Air" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Rocket-Launcher">
+            <cost resource="Tech" quantity="460"/>
+            <result resourceOrUnit="Develop-Rocket-Launcher" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyRocket-Launcher">
+            <cost resource="PUs" quantity="30"/>
+            <result resourceOrUnit="Rocket-Launcher" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyRocket">
+            <cost resource="PUs" quantity="1"/>
+            <result resourceOrUnit="Rocket" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Observation-Balloon">
+            <cost resource="Tech" quantity="52"/>
+            <result resourceOrUnit="Develop-Observation-Balloon" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyObservation-Balloon">
+            <cost resource="PUs" quantity="14"/>
+            <result resourceOrUnit="Observation-Balloon" quantity="1"/>
+        </productionRule>
+
+        <productionRule name="buyDevelop-Warplane">
+            <cost resource="Tech" quantity="225"/>
+            <result resourceOrUnit="Develop-Warplane" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyWarplane">
+            <cost resource="PUs" quantity="25"/>
+            <result resourceOrUnit="Warplane" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Fighter">
+            <cost resource="Tech" quantity="300"/>
+            <result resourceOrUnit="Develop-Fighter" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyFighter">
+            <cost resource="PUs" quantity="26"/>
+            <result resourceOrUnit="Fighter" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Bomber">
+            <cost resource="Tech" quantity="310"/>
+            <result resourceOrUnit="Develop-Bomber" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyBomber">
+            <cost resource="PUs" quantity="36"/>
+            <result resourceOrUnit="Bomber" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Air-Transport">
+            <cost resource="Tech" quantity="310"/>
+            <result resourceOrUnit="Develop-Air-Transport" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyAir-Transport">
+            <cost resource="PUs" quantity="40"/>
+            <result resourceOrUnit="Air-Transport" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Jet-Fighter">
+            <cost resource="Tech" quantity="355"/>
+            <result resourceOrUnit="Develop-Jet-Fighter" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyJet-Fighter">
+            <cost resource="PUs" quantity="28"/>
+            <result resourceOrUnit="Jet-Fighter" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Stealth-Bomber">
+            <cost resource="Tech" quantity="385"/>
+            <result resourceOrUnit="Develop-Stealth-Bomber" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyStealth-Bomber">
+            <cost resource="PUs" quantity="38"/>
+            <result resourceOrUnit="Stealth-Bomber" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Attack-Drone">
+            <cost resource="Tech" quantity="420"/>
+            <result resourceOrUnit="Develop-Attack-Drone" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyAttack-Drone">
+            <cost resource="PUs" quantity="23"/>
+            <result resourceOrUnit="Attack-Drone" quantity="1"/>
+        </productionRule>
+
+        <productionRule name="buyCamp">
+            <cost resource="PUs" quantity="20"/>
+            <result resourceOrUnit="Camp" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Fort">
+            <cost resource="Tech" quantity="4"/>
+            <result resourceOrUnit="Develop-Fort" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyFort">
+            <cost resource="PUs" quantity="30"/>
+            <result resourceOrUnit="Fort" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Castle">
+            <cost resource="Tech" quantity="24"/>
+            <result resourceOrUnit="Develop-Castle" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyCastle">
+            <cost resource="PUs" quantity="40"/>
+            <result resourceOrUnit="Castle" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Citadel">
+            <cost resource="Tech" quantity="57"/>
+            <result resourceOrUnit="Develop-Citadel" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyCitadel">
+            <cost resource="PUs" quantity="50"/>
+            <result resourceOrUnit="Citadel" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Command-Bunker">
+            <cost resource="Tech" quantity="290"/>
+            <result resourceOrUnit="Develop-Command-Bunker" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyCommand-Bunker">
+            <cost resource="PUs" quantity="60"/>
+            <result resourceOrUnit="Command-Bunker" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Missile-Shield">
+            <cost resource="Tech" quantity="510"/>
+            <result resourceOrUnit="Develop-Missile-Shield" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyMissile-Shield">
+            <cost resource="PUs" quantity="40"/>
+            <result resourceOrUnit="Missile-Shield" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyDevelop-Energy-Shield">
+            <cost resource="Tech" quantity="520"/>
+            <result resourceOrUnit="Develop-Energy-Shield" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyEnergy-Shield">
+            <cost resource="PUs" quantity="20"/>
+            <result resourceOrUnit="Energy-Shield" quantity="1"/>
+        </productionRule>
+
+        <productionRule name="buyDevelop-Nuke">
+            <cost resource="Tech" quantity="345"/>
+            <result resourceOrUnit="Develop-Nuke" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyNuke">
+            <cost resource="PUs" quantity="30"/>
+            <result resourceOrUnit="Nuke" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyNuke-Explosion">
+            <cost resource="PUs" quantity="1"/>
+            <result resourceOrUnit="Nuke-Explosion" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyRadiation">
+            <cost resource="PUs" quantity="1"/>
+            <result resourceOrUnit="Radiation" quantity="1"/>
+        </productionRule>
+        <productionRule name="buySea-Radiation">
+            <cost resource="PUs" quantity="1"/>
+            <result resourceOrUnit="Sea-Radiation" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyRadiation-Zone">
+            <cost resource="PUs" quantity="1"/>
+            <result resourceOrUnit="Radiation-Zone" quantity="1"/>
+        </productionRule>
+
+        <productionRule name="buyDevelop-Missile-Silo">
+            <cost resource="Tech" quantity="1000"/>
+            <result resourceOrUnit="Develop-Missile-Silo" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyMissile-Silo">
+            <cost resource="PUs" quantity="100"/>
+            <result resourceOrUnit="Missile-Silo" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyBallistic-Missile">
+            <cost resource="PUs" quantity="1"/>
+            <result resourceOrUnit="Ballistic-Missile" quantity="1"/>
+        </productionRule>
                 
 <!-- Start Repair rules -->
         <repairRule name="repairFort">
@@ -7924,6 +8416,189 @@
             <option name="uses" value="1"/>
         </attachment>
 <!-- End Fleet-Carrier unit development -->
+
+<!-- Start Caveman unit development -->
+        <attachment name="conditionAttachment-Brittonic-Develop-Axeman" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Develop-Axeman" count="1"/>
+        </attachment>
+        <attachment name="triggerAttachment_Brittonic_Develop_Caveman" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment-Brittonic-Develop-Caveman"/>
+            <option name="when" value="after:BrittonicPlace"/>
+            <option name="productionRule" value="production_Brittonic:buyAxeman"/>
+            <option name="productionRule" value="production_Brittonic_Combat:buyAxeman"/>
+            <option name="productionRule" value="production_Brittonic:buyDevelop-Boat"/>
+            <option name="productionRule" value="production_Brittonic:buyDevelop-Spearman"/>
+            <option name="productionRule" value="production_Brittonic:buyDevelop-Chariot"/>
+            <option name="productionRule" value="production_Brittonic:buyDevelop-Catapult"/>
+            <option name="productionRule" value="production_Brittonic:buyDevelop-Slinger"/>
+            <option name="productionRule" value="production_Brittonic:-buyDevelop-Axeman"/>
+            <option name="productionRule" value="production_Brittonic:-buyCaveman"/>
+	    <option name="productionRule" value="production_Brittonic_Combat:-buyCaveman"/>
+            <option name="removeUnits" value="all:Develop-Caveman" count="1"/>
+            <option name="uses" value="1"/>
+        </attachment>
+        <attachment name="conditionAttachment-Celtic-Develop-Caveman" attachTo="Celtic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Develop-Caveman" count="1"/>
+        </attachment>
+        <attachment name="triggerAttachment_Celtic_Develop_Caveman" attachTo="Celtic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment-Celtic-Develop-Caveman"/>
+            <option name="when" value="after:CelticPlace"/>
+            <option name="productionRule" value="production_Celtic:buyAxeman"/>
+            <option name="productionRule" value="production_Celtic_Combat:buyAxeman"/>
+            <option name="productionRule" value="production_Celtic:buyDevelop-Boat"/>
+            <option name="productionRule" value="production_Celtic:buyDevelop-Spearman"/>
+            <option name="productionRule" value="production_Celtic:buyDevelop-Chariot"/>
+            <option name="productionRule" value="production_Celtic:buyDevelop-Catapult"/>
+            <option name="productionRule" value="production_Celtic:buyDevelop-Slinger"/>
+            <option name="productionRule" value="production_Celtic:-buyDevelop-Axeman"/>
+            <option name="productionRule" value="production_Celtic:-buyCaveman"/>
+	    <option name="productionRule" value="production_Celtic_Combat:-buyCaveman"/>
+            <option name="removeUnits" value="all:Develop-Caveman" count="1"/>
+            <option name="uses" value="1"/>
+        </attachment>
+        <attachment name="conditionAttachment-Germanic-Develop-Caveman" attachTo="Germanic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Develop-Caveman" count="1"/>
+        </attachment>
+        <attachment name="triggerAttachment_Germanic_Develop_Caveman" attachTo="Germanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment-Germanic-Develop-Caveman"/>
+            <option name="when" value="after:GermanicPlace"/>
+            <option name="productionRule" value="production_Germanic:buyAxeman"/>
+            <option name="productionRule" value="production_Germanic_Combat:buyAxeman"/>
+            <option name="productionRule" value="production_Germanic:buyDevelop-Boat"/>
+            <option name="productionRule" value="production_Germanic:buyDevelop-Spearman"/>
+            <option name="productionRule" value="production_Germanic:buyDevelop-Chariot"/>
+            <option name="productionRule" value="production_Germanic:buyDevelop-Catapult"/>
+            <option name="productionRule" value="production_Germanic:buyDevelop-Slinger"/>
+            <option name="productionRule" value="production_Germanic:-buyDevelop-Axeman"/>
+            <option name="productionRule" value="production_Germanic:-buyCaveman"/>
+	    <option name="productionRule" value="production_Germanic_Combat:-buyCaveman"/>
+            <option name="removeUnits" value="all:Develop-Caveman" count="1"/>
+            <option name="uses" value="1"/>
+        </attachment>
+        <attachment name="conditionAttachment-Romanic-Develop-Caveman" attachTo="Romanic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Develop-Caveman" count="1"/>
+        </attachment>
+        <attachment name="triggerAttachment_Romanic_Develop_Caveman" attachTo="Romanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment-Romanic-Develop-Caveman"/>
+            <option name="when" value="after:RomanicPlace"/>
+            <option name="productionRule" value="production_Romanic:buyAxeman"/>
+            <option name="productionRule" value="production_Romanic_Combat:buyAxeman"/>
+            <option name="productionRule" value="production_Romanic:buyDevelop-Boat"/>
+            <option name="productionRule" value="production_Romanic:buyDevelop-Spearman"/>
+            <option name="productionRule" value="production_Romanic:buyDevelop-Chariot"/>
+            <option name="productionRule" value="production_Romanic:buyDevelop-Catapult"/>
+            <option name="productionRule" value="production_Romanic:buyDevelop-Slinger"/>
+            <option name="productionRule" value="production_Romanic:-buyDevelop-Axeman"/>
+            <option name="productionRule" value="production_Romanic:-buyCaveman"/>
+	    <option name="productionRule" value="production_Romanic_Combat:-buyCaveman"/>
+            <option name="removeUnits" value="all:Develop-Caveman" count="1"/>
+            <option name="uses" value="1"/>
+        </attachment>
+        <attachment name="conditionAttachment-Baltic-Develop-Caveman" attachTo="Baltic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Develop-Caveman" count="1"/>
+        </attachment>
+        <attachment name="triggerAttachment_Baltic_Develop_Caveman" attachTo="Baltic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment-Baltic-Develop-Caveman"/>
+            <option name="when" value="after:BalticPlace"/>
+            <option name="productionRule" value="production_Baltic:buyAxeman"/>
+            <option name="productionRule" value="production_Baltic_Combat:buyAxeman"/>
+            <option name="productionRule" value="production_Baltic:buyDevelop-Boat"/>
+            <option name="productionRule" value="production_Baltic:buyDevelop-Spearman"/>
+            <option name="productionRule" value="production_Baltic:buyDevelop-Chariot"/>
+            <option name="productionRule" value="production_Baltic:buyDevelop-Catapult"/>
+            <option name="productionRule" value="production_Baltic:buyDevelop-Slinger"/>
+            <option name="productionRule" value="production_Baltic:-buyDevelop-Axeman"/>
+            <option name="productionRule" value="production_Baltic:-buyCaveman"/>
+	    <option name="productionRule" value="production_Baltic_Combat:-buyCaveman"/>
+            <option name="removeUnits" value="all:Develop-Caveman" count="1"/>
+            <option name="uses" value="1"/>
+        </attachment>
+        <attachment name="conditionAttachment-Hellenic-Develop-Caveman" attachTo="Hellenic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Develop-Caveman" count="1"/>
+        </attachment>
+        <attachment name="triggerAttachment_Hellenic_Develop_Caveman" attachTo="Hellenic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment-Hellenic-Develop-ACaveman"/>
+            <option name="when" value="after:HellenicPlace"/>
+            <option name="productionRule" value="production_Hellenic:buyAxeman"/>
+            <option name="productionRule" value="production_Hellenic_Combat:buyAxeman"/>
+            <option name="productionRule" value="production_Hellenic:buyDevelop-Boat"/>
+            <option name="productionRule" value="production_Hellenic:buyDevelop-Spearman"/>
+            <option name="productionRule" value="production_Hellenic:buyDevelop-Chariot"/>
+            <option name="productionRule" value="production_Hellenic:buyDevelop-Catapult"/>
+            <option name="productionRule" value="production_Hellenic:buyDevelop-Slinger"/>
+            <option name="productionRule" value="production_Hellenic:-buyDevelop-Axeman"/>
+            <option name="productionRule" value="production_Hellenic:-buyCaveman"/>
+	    <option name="productionRule" value="production_Hellenic_Combat:-buyCaveman"/>
+            <option name="removeUnits" value="all:Develop-Caveman" count="1"/>
+            <option name="uses" value="1"/>
+        </attachment>
+        <attachment name="conditionAttachment-Slavic-Develop-Caveman" attachTo="Slavic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Develop-Caveman" count="1"/>
+        </attachment>
+        <attachment name="triggerAttachment_Slavic_Develop_Caveman" attachTo="Slavic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment-Slavic-Develop-Caveman"/>
+            <option name="when" value="after:SlavicPlace"/>
+            <option name="productionRule" value="production_Slavic:buyAxeman"/>
+            <option name="productionRule" value="production_Slavic_Combat:buyAxeman"/>
+            <option name="productionRule" value="production_Slavic:buyDevelop-Boat"/>
+            <option name="productionRule" value="production_Slavic:buyDevelop-Spearman"/>
+            <option name="productionRule" value="production_Slavic:buyDevelop-Chariot"/>
+            <option name="productionRule" value="production_Slavic:buyDevelop-Catapult"/>
+            <option name="productionRule" value="production_Slavic:buyDevelop-Slinger"/>
+            <option name="productionRule" value="production_Slavic:-buyDevelop-Axeman"/>
+            <option name="productionRule" value="production_Slavic:-buyCaveman"/>
+	    <option name="productionRule" value="production_Slavic_Combat:-buyCaveman"/>
+            <option name="removeUnits" value="all:Develop-Caveman" count="1"/>
+            <option name="uses" value="1"/>
+        </attachment>
+        <attachment name="conditionAttachment-Hattic-Develop-Caveman" attachTo="Hattic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Develop-Caveman" count="1"/>
+        </attachment>
+        <attachment name="triggerAttachment_Hattic_Develop_Caveman" attachTo="Hattic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment-Hattic-Develop-Caveman"/>
+            <option name="when" value="after:HatticPlace"/>
+            <option name="productionRule" value="production_Hattic:buyAxeman"/>
+            <option name="productionRule" value="production_Hattic_Combat:buyAxeman"/>
+            <option name="productionRule" value="production_Hattic:buyDevelop-Boat"/>
+            <option name="productionRule" value="production_Hattic:buyDevelop-Spearman"/>
+            <option name="productionRule" value="production_Hattic:buyDevelop-Chariot"/>
+            <option name="productionRule" value="production_Hattic:buyDevelop-Catapult"/>
+            <option name="productionRule" value="production_Hattic:buyDevelop-Slinger"/>
+            <option name="productionRule" value="production_Hattic:-buyDevelop-Axeman"/>
+            <option name="productionRule" value="production_Hattic:-buyCaveman"/>
+	    <option name="productionRule" value="production_Hattic_Combat:-buyCaveman"/>
+            <option name="removeUnits" value="all:Develop-Caveman" count="1"/>
+            <option name="uses" value="1"/>
+        </attachment>
+        <attachment name="conditionAttachment-Barbarians-Develop-Caveman" attachTo="Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Develop-Caveman" count="1"/>
+        </attachment>
+        <attachment name="triggerAttachment_Barbarians_Develop_Caveman" attachTo="Barbarians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment-Barbarians-Develop-Caveman"/>
+            <option name="when" value="after:BarbariansPlace"/>
+            <option name="productionRule" value="production_Barbarians:buyAxeman"/>
+            <option name="productionRule" value="production_Barbarians_Combat:buyAxeman"/>
+            <option name="productionRule" value="production_Barbarians:buyDevelop-Boat"/>
+            <option name="productionRule" value="production_Barbarians:buyDevelop-Spearman"/>
+            <option name="productionRule" value="production_Barbarians:buyDevelop-Chariot"/>
+            <option name="productionRule" value="production_Barbarians:buyDevelop-Catapult"/>
+            <option name="productionRule" value="production_Barbarians:buyDevelop-Slinger"/>
+            <option name="productionRule" value="production_Barbarians:-buyDevelop-Axeman"/>
+            <option name="productionRule" value="production_Barbarians:-buyCaveman"/>
+	    <option name="productionRule" value="production_Barbarians_Combat:-buyCaveman"/>
+            <option name="removeUnits" value="all:Develop-Caveman" count="1"/>
+            <option name="uses" value="1"/>
+        </attachment>
+<!-- End Caveman unit development -->
 
 <!-- Start Axeman unit development -->
         <attachment name="conditionAttachment-Brittonic-Develop-Axeman" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
