@@ -1238,7 +1238,7 @@
         </playerTech>
     </technology>
 
-    <attachment List>
+    <attachmentList>
         <attachment name="relationshipTypeAttachment" attachTo="Peaceful" javaClass="games.strategy.triplea.attachments.RelationshipTypeAttachment" type="relationship">
             <option name="archeType" value="neutral"/>
             <option name="givesBackOriginalTerritories" value="false"/>
@@ -18801,7 +18801,7 @@
         </attachment>
 <!-- End No move during the Cold War. Mortar-Bombardment and Rockets seem to give players the unwanted Combat Move -->
 
-        </attachment List>
+        </attachmentList>
         <initialize>
                 <ownerInitialize>
                         <territoryOwner territory="North China" owner="Hattic"/>
